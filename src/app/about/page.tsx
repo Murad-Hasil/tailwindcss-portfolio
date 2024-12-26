@@ -1,23 +1,24 @@
 import Image from 'next/image';
 import React from 'react';
+import '@/app/styles/about.css';
 
 export default function About() {
   return (
-    <section className="py-20 px-5 bg-white">
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-16">
-        <div className="flex-1">
-          <h2 className="text-4xl font-bold mb-5 text-gray-800">About Me</h2>
-          <p className="text-lg text-gray-700 mb-4">
+    <section className="about-section">
+      <div className="about-container">
+        <div className="about-content">
+          <h2 className="about-title">About Me</h2>
+          <p className="about-description">
             Hello! I&apos;m Murad Hasil, a passionate frontend developer and AI enthusiast. Currently, I&apos;m deeply immersed in AI and Metaverse technologies at the Governor IT Initiative.
           </p>
-          <p className="text-lg text-gray-700 mb-4">
+          <p className="about-description">
             I&apos;m focused on mastering frontend development with Next.js and continuously exploring new tech trends. My journey is driven by curiosity and a love for turning ideas into reality.
           </p>
-          <p className="text-lg text-gray-700">
+          <p className="about-description">
             Let&apos;s connect and create something amazing together!
           </p>
         </div>
-        <div className="flex-1 flex justify-center">
+        <div className="about-image">
           <Image 
             src="/profile.jpg" 
             alt="About Me Image" 

@@ -1,44 +1,45 @@
 import React from "react";
 import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
+import '@/app/styles/footer.css';
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-800 py-10 px-5 text-white">
-      <div className="container mx-auto text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-6">
-        <div className="flex-1">
-          <h2 className="text-2xl font-bold mb-2">Murad Hasil</h2>
-          <p className="text-gray-400">
+    <footer className="footer">
+      <div className="footer-container">
+        <div className="footer-section">
+          <h2 className="footer-title">Murad Hasil</h2>
+          <p className="footer-text">
             Passionate frontend developer and AI enthusiast. Let’s build the future together!
           </p>
         </div>
-        <div className="flex-1">
-          <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
-          <ul className="text-gray-400">
-            <li className="mb-2"><a href="#about" className="hover:text-white">About</a></li>
-            <li className="mb-2"><a href="#projects" className="hover:text-white">Projects</a></li>
-            <li className="mb-2"><a href="#contact" className="hover:text-white">Contact</a></li>
+        <div className="footer-section">
+          <h3 className="footer-subtitle">Quick Links</h3>
+          <ul className="footer-links">
+            <li className="footer-link-item"><a href="#about" className="footer-link">About</a></li>
+            <li className="footer-link-item"><a href="#projects" className="footer-link">Projects</a></li>
+            <li className="footer-link-item"><a href="#contact" className="footer-link">Contact</a></li>
           </ul>
         </div>
-        <div className="flex-1">
-          <h3 className="text-xl font-semibold mb-4">Get in Touch</h3>
-          <ul className="text-gray-400">
-            <li className="mb-2">Email: mbmuradhasil@gmail.com</li>
-            <li className="mb-2">Phone: +123 456 7890</li>
+        <div className="footer-section">
+          <h3 className="footer-subtitle">Get in Touch</h3>
+          <ul className="footer-contact">
+            <li className="footer-contact-item">Email: mbmuradhasil@gmail.com</li>
+            <li className="footer-contact-item">Phone: +123 456 7890</li>
           </ul>
-          <div className="flex justify-center md:justify-start gap-4 mt-4">
-            <a href="https://linkedin.com" className="text-gray-400 hover:text-white">
+          <div className="footer-social">
+            <a href="https://linkedin.com" className="footer-social-link">
               <FaLinkedin size={24} />
             </a>
-            <a href="https://github.com" className="text-gray-400 hover:text-white">
+            <a href="https://github.com" className="footer-social-link">
               <FaGithub size={24} />
             </a>
-            <a href="https://twitter.com" className="text-gray-400 hover:text-white">
+            <a href="https://twitter.com" className="footer-social-link">
               <FaTwitter size={24} />
             </a>
           </div>
         </div>
       </div>
-      <div className="text-center text-gray-500 mt-10">
+      <div className="footer-copy">
         © 2024 Murad Hasil. All rights reserved.
       </div>
     </footer>

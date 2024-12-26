@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
+import '@/app/styles/projects.css';
 
 export default function Projects() {
   const projects = [
@@ -24,22 +25,22 @@ export default function Projects() {
   ];
 
   return (
-    <section className="py-20 px-5 bg-gray-100">
-      <div className="container mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-10">Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+    <section className="projects-section">
+      <div className="projects-container">
+        <h2 className="projects-title">Projects</h2>
+        <div className="projects-grid">
           {projects.map((project, index) => (
-            <div key={index} className="bg-white shadow-md rounded-lg overflow-hidden">
+            <div key={index} className="project-card">
               <Image 
                 src={project.imageUrl} 
                 alt={project.imageAlt} 
                 width={600} 
                 height={400} 
-                className="object-cover w-full h-[250px]"
+                className="project-image"
               />
-              <div className="p-6">
-                <h3 className="text-2xl font-semibold mb-2">{project.title}</h3>
-                <p className="text-gray-700">{project.description}</p>
+              <div className="project-content">
+                <h3 className="project-title">{project.title}</h3>
+                <p className="project-description">{project.description}</p>
               </div>
             </div>
           ))}
